@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+    public static String numStr[] = {".","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+    
+    public static void keyPad(String num,int idx,String res){
+      if(idx==num.length()){
+        System.out.println(res);
+        return;
+      }
+      
+      for(int i=0;i<numStr[num.charAt(idx)-'0'].length();i++){
+        char c = numStr[num.charAt(idx)-'0'].charAt(i);
+        keyPad(num,idx+1,res+c);
+      }
+    }
+  
+  
+  
+  
+  
+    public static void main(String[] args) {
+      keyPad("23",0,"");
+  }
+}

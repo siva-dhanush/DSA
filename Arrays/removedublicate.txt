@@ -1,0 +1,15 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0; // Edge case
+        
+        int s = 0; // Pointer for unique elements
+        
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[s]) {
+                s++; 
+                nums[s] = nums[i]; // Move unique value to next position
+            }
+        }
+        return s + 1; // Length of unique elements
+    }
+}

@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main {
+  
+   public static void uniqueSub(String s,int i,String res, HashSet<String> set){
+     if(i==s.length()){
+       if(set.contains(res)){
+         return;
+       }
+       set.add(res);
+       System.out.println(res);
+       return;
+     }
+     
+     uniqueSub(s,i+1,res+s.charAt(i),set);
+     uniqueSub(s,i+1,res,set);
+
+     
+   }
+  
+  
+   
+   public static void main(String[] args) {
+     
+     HashSet<String> set = new HashSet<>();
+
+     uniqueSub("bbb",0,"",set);
+     
+     
+  }
+}

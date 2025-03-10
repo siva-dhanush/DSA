@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+    public static void dublicateElement(String s, int n, int i){
+      if(n==i){
+        System.out.println(s);
+        return;
+      }
+      
+      StringBuilder str = new StringBuilder(s);
+      if(str.charAt(n)==str.charAt(i)){
+        str.deleteCharAt(n);
+        n -= 1;
+      }
+      
+      dublicateElement(str.toString(),n,i+1);
+      
+      
+    }
+  
+  
+  
+    public static void main(String[] args) {
+      dublicateElement("dhanush",6,0);
+  }
+}

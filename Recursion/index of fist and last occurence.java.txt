@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+     
+    public static void flElement(String s, int i, char c, int c1, int c2){
+      if(s.length()-i-1==i || (c1==1&& c1==1)){
+        return;
+      }
+      
+      if(s.charAt(i)==c && c1==0){
+        System.out.println("first occurence of " + c + " is at index: "+i);
+        c1 += 1;
+        
+      }
+      
+      if(s.charAt(s.length()-i-1)==c && c2==0 ){
+        System.out.println("Last occurence of " + c + " is at index: "+(s.length()-i-1));
+        c2 += 1;
+      }
+      
+      flElement(s,i+1,c,c1,c2);
+      
+      
+    }
+  
+  
+  
+  
+  
+    public static void main(String[] args) {
+      flElement("dhanhush",0,'h',0,0);
+  }
+}

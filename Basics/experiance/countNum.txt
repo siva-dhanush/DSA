@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int[] numbers ={377,877,722,777,177};
+      int count = 0;
+      
+      for(int number:numbers){
+        if(number%3==0&& countseven(number)>=2){
+          count += 1;
+        }
+      }
+      System.out.println(count);
+    }
+      
+    public static int countseven(int number){
+      int c = 0;
+      while(number>0){
+        if(number%10 == 7){
+          c += 1;
+        }
+        number /= 10;
+      }
+      return c;
+    }
+      
+    
+      
+  
+}

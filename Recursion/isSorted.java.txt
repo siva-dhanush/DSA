@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+    public static Boolean isSorted(int[] arr,Boolean b, int i){
+      if(b==false|| i==arr.length-1){
+        return b;
+      }
+      
+      if(arr[i]>arr[i+1]){
+        b = false;
+      }
+      
+      return isSorted(arr,b,i+1);
+    }
+  
+  
+  
+  
+    public static void main(String[] args) {
+      int[] arr = {1,2,3,0};
+      System.out.println(isSorted(arr,true,0));
+
+  }
+}
